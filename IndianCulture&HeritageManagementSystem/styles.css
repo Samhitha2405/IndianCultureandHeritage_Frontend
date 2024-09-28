@@ -1,0 +1,380 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0e0e0e;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(45deg, #ff7f50, #ffcc33);
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px #ffcc33, 0 0 15px #ff7f50;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px #ffcc33, 0 0 15px #ff7f50; }
+    100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px #ffcc33, 0 0 50px #ff7f50; }
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #ffcc33;
+    color: #000;
+    box-shadow: 0 0 15px #ffcc33, 0 0 30px #ff7f50;
+}
+
+/* Banner Section */
+.banner {
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOpyl2ucJMPZ_kH9v071Bffz2aLcgt1NMKH3nsfbDwTJq40aAhuIUWRsr8__QIBTdb2ySRthhA_RkIetnTDOEjYIfxWh3vz-19siFF7InAPkYBekalzf24smnmIN0B1UP5avL-7FFMDnaOgC7_C_yn12j6InNcmaaFVWRcvXfbm-rc6Cpc_EKvqejW-f6N/s320/Download%20Kerala%20Backwater%20Landscape%20for%20free.jpg'); /* Replace with your actual image URL */
+    background-size: cover; /* Ensure the entire image covers the section */
+    background-position: center center; /* Center the image horizontally and vertically */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling (optional, for a parallax effect) */
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    z-index: 1;
+}
+
+.banner-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px #ffcc33, 0 0 30px #ff7f50;
+    animation: glow 1.5s infinite alternate;
+}
+
+.banner-content p {
+    font-size: 22px;
+    font-weight: 300;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px #ffcc33;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 300px; /* Reduce the height for mobile screens */
+        background-size: contain; /* Adjust background for smaller screens */
+        background-position: center;
+    }
+
+    .banner-content h1 {
+        font-size: 40px; /* Reduce font size for smaller screens */
+    }
+
+    .banner-content p {
+        font-size: 18px;
+    }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px #ffcc33, 0 0 30px #ff7f50; }
+    100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px #ffcc33, 0 0 50px #ff7f50; }
+}
+
+
+
+/* Section Styling */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #1f1f1f, #333);
+    color: #fff;
+    position: relative;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 204, 51, 0.5), transparent);
+    animation: sparkle 5s infinite;
+    z-index: 0;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffcc33;
+    text-shadow: 0 0 15px #ff7f50;
+    position: relative;
+    z-index: 2;
+}
+
+.section p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Card Styling */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255, 204, 51, 0.3), 0 0 40px rgba(255, 127, 80, 0.2);
+    display: inline-block;
+    width: 300px; /* Set a fixed width for all cards */
+    height: 400px; /* Set a fixed height for all cards */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(255, 204, 51, 0.5), 0 0 60px rgba(255, 127, 80, 0.3);
+}
+
+/* Image inside the card */
+.card img {
+    width: 100%; /* Ensure the image spans the full width of the card */
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensures the image is resized to fit the container without being cut off */
+    border-radius: 12px;
+}
+
+/* Card Title */
+.card h3 {
+    font-size: 22px;
+    margin-top: 10px;
+    color: #ffcc33;
+    text-shadow: 0 0 10px #ff7f50;
+}
+
+/* Card Description */
+.card p {
+    font-size: 16px;
+    color: #ddd;
+}
+/* Culture Page Styling */
+.culture-section {
+    display: flex;                  /* Use flexbox for alignment */
+    flex-wrap: wrap;               /* Allow wrapping to next line on small screens */
+    justify-content: center;        /* Center the cards horizontally */
+    padding: 40px 20px;            /* Adjust padding as needed */
+}
+
+.culture-card {
+    margin: 20px;                  /* Space between cards */
+    flex: 1 1 300px;               /* Allow cards to grow and shrink; set min width */
+    max-width: 300px;              /* Ensure maximum width of each card */
+    transition: transform 0.3s;    /* Smooth transform transition */
+}
+
+.culture-card:hover {
+    transform: scale(1.05);        /* Slightly enlarge card on hover */
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffcc33;
+    text-shadow: 0 0 5px #ff7f50;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #111;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    margin: 5px 0;
+    color: #ffcc33;
+    text-shadow: 0 0 10px #ff7f50;
+}
+.event {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 204, 51, 0.3); /* Neon glow effect */
+    max-width: 600px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 204, 51, 0.5); /* Stronger glow on hover */
+}
+
+.event img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.event h3 {
+    margin: 15px 0 10px;
+    font-size: 24px;
+    color: #ffcc33; /* Neon green accent */
+    text-shadow: 0 0 10px rgba(255, 204, 51, 0.5); /* Glowing effect */
+}
+
+.event p {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #ddd; /* Light color for better contrast on dark background */
+}
+.register-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc33; /* Neon green accent */
+    color: #333; /* Dark text for contrast */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.register-button:hover {
+    background-color: #e6b800; /* Darker shade on hover */
+    transform: translateY(-3px);
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} 
+
+/* Contact Page Styling */
+.contact-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1f1f1f, #333); /* Dark gradient background */
+    color: #fff;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffcc33; /* Neon yellow accent */
+    text-shadow: 0 0 15px #ff7f50; /* Glowing effect */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px; /* Max width for form */
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255, 204, 51, 0.3); /* Neon glow effect */
+}
+
+.contact-form label {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ffcc33; /* Neon yellow accent */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2); /* Slightly more opaque background */
+    color: #fff; /* Text color */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ddd; /* Placeholder text color */
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #ffcc33; /* Neon yellow accent */
+    color: #333; /* Dark text for contrast */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e6b800; /* Darker shade on hover */
+    transform: translateY(-3px);
+}
