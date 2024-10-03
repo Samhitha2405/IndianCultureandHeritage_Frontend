@@ -378,3 +378,89 @@ footer p {
     background-color: #e6b800; /* Darker shade on hover */
     transform: translateY(-3px);
 }
+/* Login Form Styles */
+.login-form {
+    background-color: #2b2b2b; /* Dark form background */
+    padding: 40px;
+    border-radius: 8px;
+    margin: 50px auto;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-form h2 {
+    color: #FFA500; /* Orange heading */
+    text-align: center;
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #444444; /* Dark input background */
+    color: #ffffff; /* White text in input */
+}
+
+.login-form button {
+    background-color: #FFA500; /* Orange button */
+    color: #ffffff; /* White text on button */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #ffcc00; /* Lighter orange on hover */
+}
+/* Sign Up Form Styles */
+.signup-form {
+    background-color: #2b2b2b; /* Dark form background */
+    padding: 40px;
+    border-radius: 8px;
+    margin: 50px auto;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.signup-form h2 {
+    color: #FFA500; /* Orange heading */
+    text-align: center;
+}
+
+.signup-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #444444; /* Dark input background */
+    color: #ffffff; /* White text in input */
+}
+
+.signup-form button {
+    background-color: #FFA500; /* Orange button */
+    color: #ffffff; /* White text on button */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.signup-form button:hover {
+    background-color: #ffcc00; /* Lighter orange on hover */
+}
